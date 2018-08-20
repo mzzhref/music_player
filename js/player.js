@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-08-20 01:17:12
+ * @Last Modified time: 2018-08-20 17:43:07
  */
 $(function() {
     // 音乐播放器
@@ -20,9 +20,8 @@ $(function() {
     // 音量是否静音
     var volumeBtn = true;
     // 默认音量
-    $audio.volume = 0;
-    volume = 0;
-    $("#volume-jd-width").css({ width: 0 })
+    $audio.volume = 0.5;
+    volume = 0.5;
     // 开始或暂停
     var mBtn = $("#play");
     // 上一首
@@ -102,6 +101,7 @@ $(function() {
                 num = 2;
             }
             $audio.src = 'music/' + arr[num] + '.mp3';
+            $audio.play();
         },
         m_prev_click() {
             prev.click(function() {
@@ -115,7 +115,6 @@ $(function() {
             }
             $audio.src = 'music/' + arr[num] + '.mp3';
             $audio.play();
-            console.log(arr[num])
         },
         m_next_click() {
             next.click(function() {

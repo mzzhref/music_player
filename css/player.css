@@ -2,7 +2,7 @@
 * @Author: Mr.Miao
 * @Date:   2018-08-19 17:05:04
 * @Last Modified by:   Mr.Miao
-* @Last Modified time: 2018-08-20 10:19:17
+* @Last Modified time: 2018-08-20 17:41:23
 */
 
 * {
@@ -117,7 +117,7 @@ body{
     border-radius: 10px;
 }
 #music .m-left .m-l-right .jindu .jindu-width{
-    width: 10%;
+    width: 0%;
     height: 10px;
     background: #468ae5;
     border-radius: 10px;
