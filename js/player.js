@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-08-20 17:50:49
+ * @Last Modified time: 2018-08-20 17:54:35
  */
 $(function() {
     // 音乐播放器
@@ -42,6 +42,7 @@ $(function() {
 
     var $music = {
         init() {
+            $audio.src = 'music/1.mp3';
             $music.m_play();
             $music.m_click();
             $music.m_prev_click();
