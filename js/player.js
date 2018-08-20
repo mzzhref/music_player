@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-08-20 17:43:07
+ * @Last Modified time: 2018-08-20 17:50:49
  */
 $(function() {
     // 音乐播放器
@@ -46,8 +46,8 @@ $(function() {
             $music.m_click();
             $music.m_prev_click();
             $music.m_next_click();
-            $music.m_volume();
             $music.m_time_jd();
+            $music.m_volume();
             $music.m_volume_jd();
         },
         m_time() {
@@ -56,19 +56,12 @@ $(function() {
                 // 记录时间
                 duration = $audio.duration;
                 currentTime = $audio.currentTime;
-                console.log(duration)
-                console.log(currentTime)
                 // 写入时间
                 durationTxt.html(psn_time($audio.duration));
                 currentTimeTxt.html(psn_time($audio.currentTime));
-                console.log(psn_time($audio.currentTime))
-
                 var num = Number(currentTime / duration * 100) + "%";
-                $(".jindu-width").css({ width: num })
-
-                if (duration == currentTime) {
-                    $music.m_next();
-                }
+                $(".jindu-width").css({ width: num });
+                if (duration == currentTime) { $music.m_next() }
             }, 1000)
         },
         m_play() {
@@ -97,9 +90,7 @@ $(function() {
         },
         m_prev() {
             num--;
-            if (num < 0) {
-                num = 2;
-            }
+            if (num < 0) { num = 2 }
             $audio.src = 'music/' + arr[num] + '.mp3';
             $audio.play();
         },
@@ -110,9 +101,7 @@ $(function() {
         },
         m_next() {
             num++;
-            if (num > 2) {
-                num = 0;
-            }
+            if (num > 2) { num = 0 }
             $audio.src = 'music/' + arr[num] + '.mp3';
             $audio.play();
         },
@@ -137,8 +126,6 @@ $(function() {
                 currentTimeTxt.html(psn_time(currentTime));
 
                 $music.m_time();
-
-                console.log(currentTime)
             });
         },
         m_volume() {
@@ -152,7 +139,6 @@ $(function() {
                     $audio.volume = volume;
                     volumeBtn = true;
                     $(this).removeClass('volume-none');
-
                     var num = Number(volume * 100) + "%";
                     $("#volume-jd-width").css({ width: num })
                 }
@@ -171,8 +157,6 @@ $(function() {
 
                 $audio.volume = parseFloat((x - l) / width).toFixed(1);
                 volume = $audio.volume;
-
-                console.log(volume)
             });
         }
     }
@@ -183,24 +167,9 @@ $(function() {
         var minutes = Math.floor((m % 3600) / 60);
         var seconds = Math.floor(m % 60);
 
-        if (hours < 10) {
-            hours = "0" + hours;
-        } else {
-            hours = hours;
-        }
-
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        } else {
-            minutes = minutes;
-        }
-
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        } else {
-            seconds = seconds;
-        }
-
+        if (hours < 10) { hours = "0" + hours } else { hours = hours }
+        if (minutes < 10) { minutes = "0" + minutes } else { minutes = minutes }
+        if (seconds < 10) { seconds = "0" + seconds } else { seconds = seconds }
         return hours + ":" + minutes + ":" + seconds;
     }
 
