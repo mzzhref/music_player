@@ -2,7 +2,7 @@
 * @Author: Mr.Miao
 * @Date:   2018-08-19 17:05:04
 * @Last Modified by:   Mr.Miao
-* @Last Modified time: 2018-08-19 23:41:53
+* @Last Modified time: 2018-08-20 10:19:17
 */
 
 * {
@@ -95,6 +95,7 @@ body{
 }
 #music .m-left .m-l-left .player-pause{
     background: url('../img/pause.png') center center no-repeat!important;
+    background-size: 20px!important;
 }
 #music .m-left .m-l-left .player-btn:nth-of-type(3){
     background: url('../img/next.png') center center no-repeat;
