@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-08-20 17:54:35
+ * @Last Modified time: 2018-08-20 20:39:33
  */
 $(function() {
     // 音乐播放器
@@ -154,10 +154,17 @@ $(function() {
                 var x = e.pageX || e.clientX + scrollX;
 
                 var num = Number((x - l) / width * 100) + "%";
-                $("#volume-jd-width").css({ width: num })
+                $("#volume-jd-width").css({ width: num });
 
                 $audio.volume = parseFloat((x - l) / width).toFixed(1);
                 volume = $audio.volume;
+
+                console.log(volume)
+                if(volume == '0'){
+                    volumeA.addClass('volume-none');
+                }else{
+                    volumeA.removeClass('volume-none');
+                }
             });
         }
     }
