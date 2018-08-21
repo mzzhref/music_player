@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-08-20 20:39:33
+ * @Last Modified time: 2018-08-21 12:47:50
  */
 $(function() {
     // 音乐播放器
@@ -112,7 +112,7 @@ $(function() {
             })
         },
         m_time_jd() {
-            jinduDiv.click(function() {
+            jinduDiv.click(function(event) {
                 var width = $(this).width();
                 var l = $(this).offset().left;
                 var e = event || window.event;
@@ -159,7 +159,6 @@ $(function() {
                 $audio.volume = parseFloat((x - l) / width).toFixed(1);
                 volume = $audio.volume;
 
-                console.log(volume)
                 if(volume == '0'){
                     volumeA.addClass('volume-none');
                 }else{
