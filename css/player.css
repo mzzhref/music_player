@@ -2,7 +2,7 @@
 * @Author: Mr.Miao
 * @Date:   2018-08-19 17:05:04
 * @Last Modified by:   Mr.Miao
-* @Last Modified time: 2018-08-20 17:41:23
+* @Last Modified time: 2018-09-28 14:59:37
 */
 
 * {
@@ -115,6 +115,7 @@ body{
     margin-top: 25px;
     background: #fff;
     border-radius: 10px;
+    cursor: pointer;
 }
 #music .m-left .m-l-right .jindu .jindu-width{
     width: 0%;
