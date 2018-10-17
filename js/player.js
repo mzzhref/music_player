@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-09-28 11:30:33
+ * @Last Modified time: 2018-10-12 17:29:49
  */
 
 // 音乐播放器
@@ -187,9 +187,9 @@ window.addEventListener('message', function(event) {
 
 function dy() {
     if (audioStatus == 'playing') {
-        $audio.play();
         mBtn.removeClass('player-pause');
         audioBtn = false;
+        $audio.play();
     }
 }
 
