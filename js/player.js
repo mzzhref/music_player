@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-10-12 17:29:49
+ * @Last Modified time: 2018-10-19 16:48:35
  */
 
 // 音乐播放器
@@ -179,7 +179,7 @@ $audio.addEventListener("pause", function() {
 
 window.addEventListener('message', function(event) {
     var msg = eval(event).data;
-    if(!!!msg){}else{
+    if (!!!msg) {} else {
         $audio.src = msg;
         dy();
     }

@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-29 15:45:34
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-09-28 14:56:14
+ * @Last Modified time: 2018-10-19 16:47:41
  */
 window.onload = function() {
     var ajaxTitle = document.getElementById("ivs_title").innerHTML.replace(/<script[^>]*>(.|\n)*<\/script>/ig, "").replace(/<style[^>]*>(.|\n)*<\/style>/ig, "").replace(/<!--.*?-->/ig, "").replace(/<[^>]*>/ig, "");
@@ -43,7 +43,11 @@ window.onload = function() {
                 if (data.status != '0') {
                     getMp3Fn(id);
                 } else {
-                    document.getElementById('music_player').contentWindow.postMessage(data.mp3Url,"https://tts.smgtech.net:8443/audioServer/player/player.html")
+                    if (!!!data.mp3Url) {
+                        getMp3Fn(id);
+                    }else{
+                        document.getElementById('music_player').contentWindow.postMessage(data.mp3Url,"https://tts.smgtech.net:8443/audioServer/player/player.html")
+                    }
                 }
             },
             fail: function(fail) {}
