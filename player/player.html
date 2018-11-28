@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/player.css">
+</head>
+
+<body>
+    <audio id="audio" src="music/Introduc.mp3" loop>当前了浏览器不支持音乐播放器</audio>
+    <div id="music" class="clearfix">
+        <div class="m-left fl">
+        	<div class="m-l-left fl">
+        		<a href="javascript:;" class="player-btn fl" id="prev"></a>
+        		<a href="javascript:;" class="player-btn fl player-pause" id="play"></a>
+        		<a href="javascript:;" class="player-btn fl" id="next"></a>
+        	</div>
+        	<div class="m-l-right fl">
+        		<a href="javascript:;" class="player-jd-time player-jd fl tc" id="currentTime">00:00:00</a>
+        		<div class="jindu fl" id="jindu">
+        			<div class="jindu-width"></div>
+        		</div>
+        		<a href="javascript:;" class="player-all-time player-jd fl tc" id="duration">00:00:00</a>
+        	</div>
+        </div>
+        <div class="m-right fl">
+        	<a href="javascript:;" class="volume fl" id="volume"></a>
+        	<div class="volume-jd fl" id="volume-jd">
+    			<div class="volume-jd-width" id="volume-jd-width">
+    				<div class="volume-jd-radius fr"></div>
+    			</div>
+    		</div>
+        </div>
+    </div>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/player.js"></script>
+</body>
+
+</html>

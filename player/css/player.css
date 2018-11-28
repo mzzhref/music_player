@@ -1,0 +1,172 @@
+/*
+* @Author: Mr.Miao
+* @Date:   2018-08-19 17:05:04
+* @Last Modified by:   Mr.Miao
+* @Last Modified time: 2018-09-28 14:59:37
+*/
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 微软雅黑;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+
+
+
+/* 播放器 */
+
+body{
+    overflow: hidden;
+}
+
+#music {
+    background: #ccc;
+    width: 100%;
+    height: 60px;
+}
+/* 播放器左面 */
+#music .m-left {
+    width: calc(100% - 160px);
+    height: 60px;
+}
+/* 播放器控制 */
+#music .m-left .m-l-left{
+    width: 100px;
+    height: 60px;
+}
+#music .m-left .m-l-left .player-btn{
+    width: calc(100% / 3);
+    height: 60px;
+}
+#music .m-left .m-l-left .player-btn:nth-of-type(1){
+    background: url('../img/prev.png') center center no-repeat;
+    background-size: 12px 15px;
+}
+#music .m-left .m-l-left .player-btn:nth-of-type(2){
+    background: url('../img/play.png') center center no-repeat;
+    background-size: 20px;
+}
+#music .m-left .m-l-left .player-pause{
+    background: url('../img/pause.png') center center no-repeat!important;
+    background-size: 20px!important;
+}
+#music .m-left .m-l-left .player-btn:nth-of-type(3){
+    background: url('../img/next.png') center center no-repeat;
+    background-size: 12px 15px;
+}
+#music .m-left .m-l-right .player-jd{
+    display: block;
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    color: #fff;
+}
+#music .m-left .m-l-right .jindu{
+    width: calc(100% - 140px);
+    height: 10px;
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#music .m-left .m-l-right .jindu .jindu-width{
+    width: 0%;
+    height: 10px;
+    background: #468ae5;
+    border-radius: 10px;
+}
+/* 播放器进度 */
+#music .m-left .m-l-right{
+    width: calc(100% - 100px);
+    height: 60px;
+}
+/* 播放器音量 */
+#music .m-right {
+    width: 160px;
+    height: 60px;
+}
+
+#music .m-right .volume{
+    display: block;
+    width: 40px;
+    height: 60px;
+    background: url('../img/vol.png') center center no-repeat;
+    background-size: 20px;
+}
+#music .m-right .volume-none{
+    background: url('../img/vol_mute.png') center center no-repeat;
+    background-size: 20px;
+}
+#music .m-right .volume-jd{
+    width: calc(100% - 60px);
+    height: 10px;
+    margin-top: 25px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#music .m-right .volume-jd-width{
+    width: 50%;
+    height: 10px;
+    background: #ff9249;
+    border-radius: 10px;
+}
+#music .m-right .volume-jd-radius{
+    width: 16px;
+    height: 16px;
+    background: #ff9249;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+    margin-top: -3px;
+    margin-right: -8px;
+}

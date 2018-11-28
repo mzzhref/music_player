@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ivsplayer</title>
+    <script>
+    	document.write(`<link rel="stylesheet" href="ivsplayer.css?v=${new Date().getTime()}">`)
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <span class="span">title</span><input class="txt" type="text" id="title">
+    </div>
+    <div class="box">
+        <span class="span">content</span><textarea id="content" class="txt"></textarea>
+    </div>
+    <div class="box">
+        <a href="javascript:;" id="submit">转语音</a>
+    </div>
+    <div id="ivs_player"></div>
+    <script id="ivsplayer"></script>
+    <script>
+    	document.write(`<script src="ivsplayer.js?v=${new Date().getTime()}"><\/script>`)
+    </script>
+</body>
+
+</html>
