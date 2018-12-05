@@ -2,7 +2,7 @@
 * @Author: Mr.Miao
 * @Date:   2018-08-19 17:05:04
 * @Last Modified by:   Mr.Miao
-* @Last Modified time: 2018-09-28 14:59:37
+* @Last Modified time: 2018-12-05 13:45:45
 */
 
 * {
@@ -82,24 +82,18 @@ body{
     height: 60px;
 }
 #music .m-left .m-l-left .player-btn{
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     height: 60px;
-}
-#music .m-left .m-l-left .player-btn:nth-of-type(1){
-    background: url('../img/prev.png') center center no-repeat;
-    background-size: 12px 15px;
-}
-#music .m-left .m-l-left .player-btn:nth-of-type(2){
     background: url('../img/play.png') center center no-repeat;
-    background-size: 20px;
+    background-size: 30px;
 }
 #music .m-left .m-l-left .player-pause{
     background: url('../img/pause.png') center center no-repeat!important;
-    background-size: 20px!important;
+    background-size: 30px!important;
 }
-#music .m-left .m-l-left .player-btn:nth-of-type(3){
-    background: url('../img/next.png') center center no-repeat;
-    background-size: 12px 15px;
+#music .m-left .m-l-left .player-stop{
+    background: url('../img/stop.png') center center no-repeat!important;
+    background-size: 30px!important;
 }
 #music .m-left .m-l-right .player-jd{
     display: block;

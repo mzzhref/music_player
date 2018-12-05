@@ -2,7 +2,7 @@
  * @Author: Mr.Miao
  * @Date:   2018-08-19 17:04:51
  * @Last Modified by:   Mr.Miao
- * @Last Modified time: 2018-10-19 16:48:35
+ * @Last Modified time: 2018-12-05 13:42:01
  */
 
 // 音乐播放器
@@ -28,6 +28,8 @@ var mBtn = $("#play");
 var prev = $("#prev");
 // 下一首
 var next = $("#next");
+// 停止
+var stop = $("#stop");
 // 播放当前时间
 var currentTimeTxt = $("#currentTime");
 var jinduDiv = $("#jindu");
@@ -42,10 +44,8 @@ var arr = [1, 2, 3];
 
 var $music = {
     init: function() {
-        // $music.m_play();
         $music.m_click();
-        // $music.m_prev_click();
-        // $music.m_next_click();
+        $music.m_stop();
         $music.m_time_jd();
         $music.m_volume();
         $music.m_volume_jd();
@@ -87,6 +87,18 @@ var $music = {
                 $(this).addClass('player-pause');
                 audioBtn = true;
             }
+        });
+    },
+    m_stop: function(){
+        stop.click(function(){
+            console.log(audioBtn)
+            $audio.currentTime = 0;
+            $audio.pause();
+            clearInterval(iTimer);
+            $(".jindu-width").css({ width: 0 });
+            currentTimeTxt.html('00:00:00')
+            mBtn.addClass('player-pause');
+            audioBtn = true;
         });
     },
     m_prev: function() {
