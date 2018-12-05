@@ -2,7 +2,7 @@
 * @Author: Mr.Miao
 * @Date:   2018-08-19 17:05:04
 * @Last Modified by:   Mr.Miao
-* @Last Modified time: 2018-12-05 14:13:13
+* @Last Modified time: 2018-12-05 14:19:05
 */
 
 * {
@@ -135,6 +135,7 @@ body{
     height: 60px;
     background: url('../img/vol.png') center center no-repeat;
     background-size: 20px;
+    color: rgba(0,0,0,0);
 }
 #music .m-right .volume-none{
     background: url('../img/vol_mute.png') center center no-repeat;
